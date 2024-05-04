@@ -1,0 +1,5 @@
+1       zonaA    grande 5 1 truecabaña true 500
+2       zobaB   mediana 3 2 true suite heladera;microondas;television
+
+1          12        222426   31    37   42  46   
+1          12        222426   31    37                                0       

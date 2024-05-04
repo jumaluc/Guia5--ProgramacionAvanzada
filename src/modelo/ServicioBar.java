@@ -1,23 +1,22 @@
 package modelo;
 import java.util.*;
-public class ServicioBar {
+public class ServicioBar implements IPagar{
 	
 	private Calendar fechaDia;
-	private int dniSolicitante;
+	private Huespedes huespedSolicitante;
 	private int cantidad;
-	private int numeroAlojamiento; 
-	private String nombrePlato;
+	private Menu plato;
 	public Calendar getFechaDia() {
 		return fechaDia;
 	}
 	public void setFechaDia(Calendar fechaDia) {
 		this.fechaDia = fechaDia;
 	}
-	public int getDniSolicitante() {
-		return dniSolicitante;
+	public Huespedes getDniSolicitante() {
+		return huespedSolicitante;
 	}
-	public void setDniSolicitante(int dniSolicitante) {
-		this.dniSolicitante = dniSolicitante;
+	public void setHuespedSolicitante(Huespedes huespedSolicitante) {
+		this.huespedSolicitante = huespedSolicitante;
 	}
 	public int getCantidad() {
 		return cantidad;
@@ -25,26 +24,25 @@ public class ServicioBar {
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
-	public int getNumeroAlojamiento() {
-		return numeroAlojamiento;
+
+
+	public Menu getNombrePlato() {
+		return plato;
 	}
-	public void setNumeroAlojamiento(int numeroAlojamiento) {
-		this.numeroAlojamiento = numeroAlojamiento;
-	}
-	public String getNombrePlato() {
-		return nombrePlato;
-	}
-	public void setNombrePlato(String nombrePlato) {
-		this.nombrePlato = nombrePlato;
+	public void setNombrePlato(Menu plato) {
+		this.plato = plato;
 	}
 	public ServicioBar() {}
-	public ServicioBar(Calendar fechaDia, int dniSolicitante, int cantidad, int numeroAlojamiento, String nombrePlato) {
+	public ServicioBar(Calendar fechaDia, Huespedes huespedSolicitante, int cantidad, Menu plato) {
 		super();
 		this.fechaDia = fechaDia;
-		this.dniSolicitante = dniSolicitante;
+		this.huespedSolicitante = huespedSolicitante;
 		this.cantidad = cantidad;
-		this.numeroAlojamiento = numeroAlojamiento;
-		this.nombrePlato = nombrePlato;
+		this.plato = plato;
+	}
+	public double totalApagar() {
+		return plato.getPrecio()*(double)cantidad;
+		
 	}
 	
 	

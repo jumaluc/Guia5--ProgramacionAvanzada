@@ -2,6 +2,6 @@ package modelo;
 
 public interface IPagar {
 	
-	double pagar();
+	double totalApagar();
 	
 }

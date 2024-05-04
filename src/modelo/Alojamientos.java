@@ -38,7 +38,7 @@ public class Alojamientos {
 	public void setTarifa(Tarifa tarifa) {
 		this.tarifa = tarifa;
 	}
-	public boolean isLibre() {
+	public boolean getLibre() {
 		return libre;
 	}
 	public void setLibre(boolean libre) {

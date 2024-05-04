@@ -1,43 +1,45 @@
 package modelo;
 import java.util.*;
 
-public class ServicioLimpieza {
+public class ServicioLimpieza implements IPagar{
 	
 	private Calendar fechaDia;
-	private double valor;
-	private int dniSolicitante;
-	private int numeroAlojamiento;
+	private static double valor=500;
+	private Huespedes huespedSolicitante;
+	
+	
 	public Calendar getFechaDia() {
 		return fechaDia;
 	}
 	public void setFechaDia(Calendar fechaDia) {
 		this.fechaDia = fechaDia;
 	}
-	public double getValor() {
+	public static double getValor() {
 		return valor;
 	}
-	public void setValor(double valor) {
-		this.valor = valor;
+	public Huespedes getDniSolicitante() {
+		return huespedSolicitante;
 	}
-	public int getDniSolicitante() {
-		return dniSolicitante;
+	public void setHuespedSolicitante(Huespedes dniSolicitante) {
+		this.huespedSolicitante = dniSolicitante;
 	}
-	public void setDniSolicitante(int dniSolicitante) {
-		this.dniSolicitante = dniSolicitante;
+	
+
+
+	public Huespedes getHuespedSolicitante() {
+		return huespedSolicitante;
 	}
-	public int getNumeroAlojamiento() {
-		return numeroAlojamiento;
-	}
-	public void setNumeroAlojamiento(int numeroAlojamiento) {
-		this.numeroAlojamiento = numeroAlojamiento;
+	public static void setValor(double valor) {
+		ServicioLimpieza.valor = valor;
 	}
 	public ServicioLimpieza() {}
-	public ServicioLimpieza(Calendar fechaDia, double valor, int dniSolicitante, int numeroAlojamiento) {
+	public ServicioLimpieza(Calendar fechaDia, Huespedes huespedSolicitante) {
 		super();
 		this.fechaDia = fechaDia;
-		this.valor = valor;
-		this.dniSolicitante = dniSolicitante;
-		this.numeroAlojamiento = numeroAlojamiento;
+		this.huespedSolicitante = huespedSolicitante;
+	}
+	public double totalApagar() {
+		return valor;
 	}
 	
 	

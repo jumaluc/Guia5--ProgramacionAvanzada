@@ -1,0 +1,12 @@
+{
+"menu": [
+    {
+      "idMenu" : 1,
+      "tipo": "desayuno",
+      "nombre": "huevos revueltos",
+      "precio": 8.99,
+      "ingredientes": ["cafe", "agua", "huevos", "tostada"],
+      "compartir": false
+    }
+    ]
+} 

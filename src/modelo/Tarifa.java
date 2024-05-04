@@ -2,13 +2,29 @@ package modelo;
 
 public class Tarifa {
 	
-	private char categoria;
+	private int idTarifa;
+	private String categoria;
 	private int capacidad;
+	private double precio;
 	
-	public char getCategoria() {
+	
+	
+	public int getIdTarifa() {
+		return idTarifa;
+	}
+	public void setIdTarifa(int idTarifa) {
+		this.idTarifa = idTarifa;
+	}
+	public double getPrecio() {
+		return precio;
+	}
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+	public String getCategoria() {
 		return categoria;
 	}
-	public void setCategoria(char categoria) {
+	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
 	public int getCapacidad() {
@@ -19,10 +35,11 @@ public class Tarifa {
 	}
 	public Tarifa() {}
 	
-	public Tarifa(char categoria, int capacidad) {
-		super();
+	public Tarifa(int idTarifa,String categoria, int capacidad, double precio) {
+		this.idTarifa = idTarifa;
 		this.categoria = categoria;
 		this.capacidad = capacidad;
+		this.precio = precio;
 	}
 	
 	

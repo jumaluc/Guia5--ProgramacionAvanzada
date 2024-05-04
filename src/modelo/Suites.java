@@ -2,7 +2,7 @@ package modelo;
 
 public class Suites extends Alojamientos {
 	
-	private String [] dispositivosElectronicos;
+	private String [] dispositivosElectronicos = new String[3];
 
 	public String[] getDispositivosElectronicos() {
 		return dispositivosElectronicos;

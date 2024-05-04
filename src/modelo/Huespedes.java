@@ -33,7 +33,6 @@ public class Huespedes {
 	}
 	public Huespedes() {}
 	public Huespedes(int numeroDocumento, String nombre, String apellido, String pais) {
-		super();
 		this.numeroDocumento = numeroDocumento;
 		this.nombre = nombre;
 		this.apellido = apellido;
