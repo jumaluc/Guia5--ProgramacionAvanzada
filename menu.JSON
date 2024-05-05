@@ -1,12 +1,20 @@
-{
-"menu": [
+
+ [
     {
       "idMenu" : 1,
       "tipo": "desayuno",
       "nombre": "huevos revueltos",
       "precio": 8.99,
-      "ingredientes": ["cafe", "agua", "huevos", "tostada"],
+      "ingredientes": ["cafe", "agua", "huevos"],
+      "compartir": false
+    },
+    {
+      "idMenu" : 2,
+      "tipo": "pollo",
+      "nombre": "almuerzo",
+      "precio": 10.99,
+      "ingredientes": ["pollo", "arroz", "queso"],
       "compartir": false
     }
-    ]
-} 
+]
+ 
