@@ -12,10 +12,10 @@ public class MenuJSON {
 			File aJson = new File("menu.JSON");
 			FileInputStream fsInJson = new FileInputStream(aJson);
 			JsonReader rdrJson = Json.createReader(fsInJson);
-			JsonObject objJson = rdrJson.readObject();
-			JsonArray menuArray = objJson.getJsonArray("menu");
+			JsonArray menuArray = rdrJson.getJsonArray();
 			int cantidadObj = menuArray.size();
 			Menu [] menu = new Menu[cantidadObj];
+			
 			for(int i = 0 ; i<cantidadObj ; i++) {
 				
 				JsonObject menuJson = menuArray.getJsonObject(i);
@@ -40,9 +40,7 @@ public class MenuJSON {
 			
 			}
 		catch(IOException e) {
-			System.out.println("El archivo no existe");
-
-		}
+			e.printStackTrace();		}
 		finally {
 			
 		}
